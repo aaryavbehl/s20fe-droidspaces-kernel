@@ -6,16 +6,7 @@
 
 **Samsung Galaxy S20 FE 5G · Snapdragon 865 · Android 17 · ARM64**
 
-![Android](https://img.shields.io/badge/Android-17-3DDC84?style=for-the-badge&logo=android&logoColor=white)
-![Kernel](https://img.shields.io/badge/Linux-4.19.325-FCC624?style=for-the-badge&logo=linux&logoColor=black)
-![Device](https://img.shields.io/badge/Samsung-r8q-1428A0?style=for-the-badge&logo=samsung)
-![Magisk](https://img.shields.io/badge/Magisk-31.1-00AF9C?style=for-the-badge)
-![License](https://img.shields.io/badge/Kernel-GPL--2.0-blue?style=for-the-badge)
-
-![Boot](https://img.shields.io/badge/Android_boot-PASS-238636?style=flat-square)
-![Root](https://img.shields.io/badge/Root-PASS-238636?style=flat-square)
-![Checks](https://img.shields.io/badge/Droidspaces-10%2F10-238636?style=flat-square)
-![Release](https://img.shields.io/badge/v1.0.0-Experimental-D29922?style=flat-square)
+<img src="./kernel-badges.svg" alt="Android 17, Linux 4.19.325, r8q, Magisk 31.1, GPL-2.0; boot and root passed; Droidspaces 10/10; experimental release" width="760">
 
 [Overview](#why-this-exists) · [Results](#what-changed) · [Compatibility](#compatibility) · [Install](#installation) · [Build](#build-from-source) · [Credits](#credits)
 
@@ -67,9 +58,7 @@ Solid paths: verified platform. Dashed paths: planned runtime tests.
 
 <div align="center">
 
-![Required](https://img.shields.io/badge/Required-10%2F10-238636?style=for-the-badge)
-![Recommended](https://img.shields.io/badge/Recommended-9%2F10-238636?style=for-the-badge)
-![Optional](https://img.shields.io/badge/Optional-10%2F14-D29922?style=for-the-badge)
+<img src="./requirements-badges.svg" alt="Droidspaces: required 10/10, recommended 9/10, optional 10/14" width="760">
 
 </div>
 
@@ -144,7 +133,6 @@ See the **Releases** tab for the experimental v1.0.0 assets.
 | `S20FE-r8q-Droidspaces-A17-v1.0-TEST.zip` | Exact test installer used on the development device. **Strictly checksum-locked.** |
 | `Kernel-Source.tar.gz` | Complete modified kernel source; build configuration in this repository. |
 | `Image.gz` | Gzip-compressed ARM64 kernel for development, not directly flashable as boot.img. |
-| `GitHub-Repository.zip` | Repository documentation, configs, patch and scripts. |
 | `SHA256SUMS.txt` | Release file integrity checks. |
 
 The release is useful to other developers as a source and configuration reference, even when the test installer rejects their boot image. No private boot images or personal device-property dumps are included.
@@ -279,6 +267,8 @@ Alternatively, check out the full revision in `BASE_COMMIT` from the [LineageOS 
 ```text
 .
 ├── README.md
+├── kernel-badges.svg
+├── requirements-badges.svg
 ├── LICENSE
 ├── CREDITS.md
 ├── BASE_COMMIT
@@ -340,16 +330,14 @@ Removing the module entry does not restore the kernel. Restore your own boot ima
 
 ## Credits
 
-This is an adaptation of existing open-source work, not a new kernel from scratch.
+This project builds on the work of the open-source community.
 
-| Project / developer | Contribution |
-|---|---|
-| [zicstardust — SM8250 community patches](https://github.com/zicstardust/patches_android_kernel_samsung_sm8250_lineageOS) | Previous community kernel work and inspiration. |
-| [Original S20 FE Linux/Docker community post](https://www.reddit.com/r/GalaxyS20FE/comments/1tv6fgv/i_transformed_my_s20_fe_into_a_linuxdocker_server/) | Demonstrated the potential of the S20 FE as a Linux device. |
-| [ravindu644 and Droidspaces contributors](https://github.com/ravindu644/Droidspaces-OSS) | Container runtime, kernel requirements and non-GKI compatibility patch. |
-| [LineageOS](https://github.com/LineageOS/android_kernel_samsung_sm8250) | Matching base kernel source. |
-| [topjohnwu and Magisk contributors](https://github.com/topjohnwu/Magisk) | Root framework and magiskboot tooling. |
-| Linux, Samsung, Qualcomm, LLVM and Android toolchain contributors | Kernel, device drivers and compiler infrastructure. |
+- **[zicstardust](https://github.com/zicstardust/patches_android_kernel_samsung_sm8250_lineageOS)** — previous SM8250 community kernel work and inspiration.
+- **[Original S20 FE Linux/Docker project](https://www.reddit.com/r/GalaxyS20FE/comments/1tv6fgv/i_transformed_my_s20_fe_into_a_linuxdocker_server/)** — demonstrated the potential of the S20 FE as a Linux device.
+- **[Droidspaces — ravindu644 and contributors](https://github.com/ravindu644/Droidspaces-OSS)** — container runtime, kernel requirements and non-GKI compatibility patches.
+- **[LineageOS](https://github.com/LineageOS/android_kernel_samsung_sm8250)** — matching base kernel source.
+- **[Magisk — topjohnwu and contributors](https://github.com/topjohnwu/Magisk)** — root framework and boot image tooling.
+- **Linux, Samsung, Qualcomm, LLVM and Android toolchain contributors** — kernel, device drivers and compiler infrastructure.
 
 See `CREDITS.md` for additional acknowledgments. This project is independent and is not an official release of any upstream project.
 
