@@ -1,0 +1,6 @@
+id=s20fe_droidspaces_kernel
+name=S20 FE Droidspaces Kernel
+version=1.0-test
+versionCode=1
+author=S20 FE Community
+description=Linux 4.19.325 Droidspaces kernel for r8q Android 17. Permanent boot image replacement.
